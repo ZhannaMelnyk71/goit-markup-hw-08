@@ -54,8 +54,14 @@ body {
 
 .section {
   /* background-color: #2f303a; */
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
@@ -83,10 +89,25 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   /* outline: 2px solid red; */
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .backdrop {
@@ -441,11 +462,28 @@ body {
 
 .features {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .features {
+    flex-direction: row;
+  }
 }
 
 .features__item {
-  width: calc((100% - 90px) / 4);
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .features__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .features__item::before {
   content: "";
@@ -482,6 +520,13 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
   margin-top: 30px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .features__text {
@@ -489,6 +534,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .options {
@@ -536,19 +582,36 @@ body {
 
 .team-list {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
-  font-size: 16px;
-  line-height: 1.18;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .team-list {
+    flex-direction: row;
+  }
 }
 
 .team-item {
   /* padding-bottom: 30px; */
-  width: calc((100% - 90px) / 4);
+  width: 100%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border: transparent;
   border-radius: 0px 0px 4px 4px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team-name {
