@@ -2,8 +2,10 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #2f303a;
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
+  // max-width: 1600px;
+  // height: 600px;
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4),
@@ -13,11 +15,25 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 
 .hero__container {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
   text-align: center;
 }
 
@@ -25,19 +41,26 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  max-width: 696px;
+  max-width: 360px;
 
   color: var(--second-title-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .hero__btn {
   padding: 10px;
-  min-width: 216px;
+  min-width: 200px;
+  // min-width: 216px;
   height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: transparent;
@@ -52,11 +75,14 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  align-items: center;
+  text-align: center;
   letter-spacing: 0.06em;
 
   &:hover,
   &:focus {
     color: var(--main-title-color);
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 216px;
   }
 }
