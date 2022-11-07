@@ -8,7 +8,12 @@
 }
 
 .clients-item {
-  width: calc((100% - 30px) / 2);
+  display: flex;
+  justify-content: center;
+  // width: 130px;
+  @media screen and (min-width: 480px) {
+    width: calc((100% - 30px) / 2);
+  }
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 60px) / 3);
@@ -24,12 +29,12 @@
   justify-content: center;
   align-items: center;
   gap: 30px;
-  width: 130px;
-  // width: 170px;
+  // width: 130px;
+  width: 210px;
 
-  // @media screen and (min-width: 480px) {
-  //   width: 210px;
-  // }
+  @media screen and (min-width: 480px) {
+    width: 210px;
+  }
 
   @media screen and (min-width: 768px) {
     width: 226px;
