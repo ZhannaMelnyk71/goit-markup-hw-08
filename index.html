@@ -23,10 +23,10 @@
   </head>
 
   <body>
-    <!-- <header class="header"> -->
-    <!-- Navigation -->
+    <header class="header">
+      <!-- Navigation -->
 
-    <!-- <div class="container header__container">
+      <div class="container header__container">
         <nav class="navigation">
           <a href="" class="logo navigation__logo" lang="en"
             >Web<span>Studio</span>
@@ -43,11 +43,11 @@
               <a href="" class="meny__link">Контакти</a>
             </li>
           </ul>
-        </nav> -->
+        </nav>
 
-    <!-- Contacts -->
+        <!-- Contacts -->
 
-    <!-- <ul class="contacts header__contacts list">
+        <ul class="contacts header__contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link"
               ><svg class="contacts__mail-icon" width="16" height="12">
@@ -63,8 +63,73 @@
             >
           </li>
         </ul>
+
+        <button type="button" class="button button__menu-open" data-menu-open>
+          <svg class="button__meny-open-icon" width="40" height="40">
+            <use href="./images/icons/icons.svg#icon-button-meny-open"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mobile is-hidden" data-menu>
+        <div class="mobile__container">
+          <div class="mobile__meny-top">
+            <button
+              type="button"
+              class="mobile__menu-close-btn"
+              data-menu-close
+            >
+              <svg class="mobile__menu-close-icon" width="40" height="40">
+                <use
+                  href="./images/icons/icons.svg#icon-mob-meny-btn-close"
+                ></use>
+              </svg>
+            </button>
+            <ul class="mobile__list">
+              <li class="mobile__item">
+                <a href="index.html" class="mobile__link current">Студія</a>
+              </li>
+              <li class="mobile__item">
+                <a href="./portfolio.html" class="mobile__link">Портфоліо</a>
+              </li>
+              <li class="mobile__item">
+                <a href="" class="mobile__link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mobile__meny-bottom">
+            <ul class="mobile__contacts-list">
+              <li class="mobile__contacts-item">
+                <a href="tel:+380961111111" class="mobile__tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile__contacts-item">
+                <a href="mailto:info@devstudio.com" class="mobile__mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile__soc-list">
+              <li class="mobile__soc-item">
+                <a class="mobile__soc-link" href="">Instagram</a>
+              </li>
+              <li class="mobile__soc-item">
+                <a class="mobile__soc-link" href="">Twitter</a>
+              </li>
+              <li class="mobile__soc-item">
+                <a class="mobile__soc-link" href="">Facebook</a>
+              </li>
+              <li class="mobile__soc-item">
+                <a class="mobile__soc-link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <main>
       <!-- Hero -->
@@ -124,6 +189,10 @@
             <li class="portfolio__item">
               <div class="portfolio__box">
                 <img
+                  srcset="
+                    ./images/options/box-1.jpg    1x,
+                    ./images/options/box-1-2x.jpg 2x
+                  "
                   src="./images/options/box-1.jpg"
                   alt="Верстка"
                   width="370"
@@ -135,6 +204,10 @@
             <li class="portfolio__item">
               <div class="portfolio__box">
                 <img
+                  srcset="
+                    ./images/options/box-2.jpg    1x,
+                    ./images/options/box-2-2x.jpg 2x
+                  "
                   src="./images/options/box-2.jpg"
                   alt="Створення мобільної версії"
                   width="370"
@@ -146,6 +219,10 @@
             <li class="portfolio__item">
               <div class="portfolio__box">
                 <img
+                  srcset="
+                    ./images/options/box-3.jpg    1x,
+                    ./images/options/box-3-2x.jpg 2x
+                  "
                   src="./images/options/box-3.jpg"
                   alt="Дезайн"
                   width="370"
@@ -163,15 +240,35 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img
-                srcset="
-                  ./images/team/photo-1.jpg    1x,
-                  ./images/team/photo-1-2x.jpg 2x
-                "
-                src="./images/team/photo-1.jpg"
-                alt="фото-команди"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/photo-1.jpg    1x,
+                    ./images/team/photo-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-1-tablet.jpg    1x,
+                    ./images/team/photo-1-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-1-mob.jpg    1x,
+                    ./images/team/photo-1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/team/photo-1.jpg"
+                  alt="фото-команди"
+                  width="450"
+                />
+              </picture>
+
               <div class="team-text">
                 <h3 class="team-name">Ігор Дем'яненко</h3>
                 <p class="team-info" lang="en">Product Designer</p>
@@ -216,15 +313,35 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                srcset="
-                  ./images/team/photo-2.jpg    1x,
-                  ./images/team/photo-2-2x.jpg 2x
-                "
-                src="./images/team/photo-2.jpg"
-                alt="фото-команди"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/photo-2.jpg    1x,
+                    ./images/team/photo-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-2-tablet.jpg    1x,
+                    ./images/team/photo-2-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-2-mob.jpg    1x,
+                    ./images/team/photo-2-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/team/photo-2.jpg"
+                  alt="фото-команди"
+                  width="450"
+                />
+              </picture>
+
               <div class="team-text">
                 <h3 class="team-name">Ольга Рєпіна</h3>
                 <p class="team-info" lang="en">Frontend Developer</p>
@@ -269,15 +386,35 @@
               </div>
             </li>
             <li class="team-item">
-              <img
-                srcset="
-                  ./images/team/photo-3.jpg    1x,
-                  ./images/team/photo-3-2x.jpg 2x
-                "
-                src="./images/team/photo-3.jpg"
-                alt="фото-команди"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/photo-3.jpg    1x,
+                    ./images/team/photo-3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-3-tablet.jpg    1x,
+                    ./images/team/photo-3-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/photo-3-mob.jpg    1x,
+                    ./images/team/photo-3-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/team/photo-3.jpg"
+                  alt="фото-команди"
+                  width="450"
+                />
+              </picture>
+
               <div class="team-text">
                 <h3 class="team-name">Микола Тарасов</h3>
                 <p class="team-info" lang="en">Marketing</p>
@@ -344,16 +481,13 @@
                   "
                   media="(min-width: 480px)"
                 />
+                <img
+                  src="./images/team/photo-4.jpg"
+                  alt="фото-команди"
+                  width="450"
+                />
               </picture>
-              <img
-                srcset="
-                  ./images/team/photo-4.jpg    1x,
-                  ./images/team/photo-4-2x.jpg 2x
-                "
-                src="./images/team/photo-4.jpg"
-                alt="фото-команди"
-                width="270"
-              />
+
               <div class="team-text">
                 <h3 class="team-name">Михайло Єрмаков</h3>
                 <p class="team-info" lang="en">UI Designer</p>
@@ -628,5 +762,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

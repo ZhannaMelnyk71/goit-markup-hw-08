@@ -9,6 +9,10 @@ body {
   list-style: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .section {
   /* background-color: #2f303a; */
   // padding-top: 94px;
