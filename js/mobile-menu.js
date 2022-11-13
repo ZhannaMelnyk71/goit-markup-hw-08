@@ -4,12 +4,12 @@
     closeMenuBtn: document.querySelector("[data-menu-close]"),
     menu: document.querySelector("[data-menu]"),
     body: document.querySelector("body"),
-    menyList: document.querySelector(".mobile__list"),
+    // menuList: document.querySelector('.mob-menu-list'),
   };
 
   refs.openMenuBtn.addEventListener("click", toggleMenu);
   refs.closeMenuBtn.addEventListener("click", toggleMenu);
-  refs.menyList.addEventListener("click", removeMenu);
+  refs.menuList.addEventListener("click", removeMenu);
 
   function toggleMenu() {
     refs.menu.classList.toggle("is-hidden");
